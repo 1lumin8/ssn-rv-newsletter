@@ -122,10 +122,9 @@ button:active {
 
 .quote-card {
   display: flex;
-  min-height: 320px;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 26px;
+  justify-content: flex-start;
+  gap: 24px;
   grid-column: span 4;
   background: var(--panel);
   border: 1px solid var(--line);
@@ -137,7 +136,6 @@ button:active {
 
 .quote-card:first-child {
   grid-column: span 8;
-  min-height: 420px;
   border-top-color: var(--accent);
 }
 
@@ -174,7 +172,6 @@ blockquote {
   .quote-card:nth-child(4),
   .quote-card:nth-child(5) {
     grid-column: span 12;
-    min-height: 0;
   }
 }
 
