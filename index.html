@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SSN RV Daily Reader</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="edition-shell">
+      <header class="masthead">
+        <div class="kicker">SSN RV Seminar Archive</div>
+        <h1>Daily Reader</h1>
+        <div class="rule"></div>
+        <p>Five exact excerpts, five different sources.</p>
+      </header>
+
+      <section class="controls" aria-label="Generate quotes">
+        <button id="generateButton" type="button">Generate 5 Quotes</button>
+        <div class="edition-meta">
+          <span id="editionDate"></span>
+          <span id="sourceCount"></span>
+        </div>
+      </section>
+
+      <section id="quoteGrid" class="quote-grid" aria-live="polite"></section>
+    </main>
+
+    <template id="quoteTemplate">
+      <article class="quote-card">
+        <div class="source-row">
+          <span class="source-title"></span>
+        </div>
+        <blockquote></blockquote>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
