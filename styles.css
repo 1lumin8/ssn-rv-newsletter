@@ -115,7 +115,8 @@ button:active {
 
 .quote-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
   gap: 18px;
   padding-top: 22px;
 }
@@ -125,7 +126,6 @@ button:active {
   flex-direction: column;
   justify-content: flex-start;
   gap: 24px;
-  grid-column: span 4;
   background: var(--panel);
   border: 1px solid var(--line);
   border-top: 5px solid var(--ink);
@@ -135,13 +135,7 @@ button:active {
 }
 
 .quote-card:first-child {
-  grid-column: span 8;
   border-top-color: var(--accent);
-}
-
-.quote-card:nth-child(4),
-.quote-card:nth-child(5) {
-  grid-column: span 6;
 }
 
 .source-row {
@@ -164,15 +158,6 @@ blockquote {
   font-weight: 700;
   line-height: 1.55;
   word-break: keep-all;
-}
-
-@media (max-width: 900px) {
-  .quote-card,
-  .quote-card:first-child,
-  .quote-card:nth-child(4),
-  .quote-card:nth-child(5) {
-    grid-column: span 12;
-  }
 }
 
 @media (max-width: 640px) {
