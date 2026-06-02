@@ -68,6 +68,86 @@ const quotePool = [
     source: "260329 주일예배(계14장) 처음 익은 열매 시온산 14만 4천",
     date: "260329",
     quote: "이런 데도 세상이 좋고 세상 적으로 발버둥치기보다도 먼저 그의 나라와 그의 의를 구해야 한다, 그 말인 것입니다. 마태 6장 33절에 그의 나라와 그의 의를 구하라 하였으니 바로 열두지파 14장의 이 말씀이 그의 나라와 그의 의 맞지요. 그러나 분명히 우리는 이 말씀을 믿고 행하는 자가 되기를 바랍니다."
+  },
+  {
+    source: "260412 주일예배(계17장) 음녀의 음행과 포도주",
+    date: "260412",
+    quote: "그러면 언제라는 “때”가 나오고 어디라는 “곳”이 나오고 이것이 누구라는 “것”이 나와야 하지 않겠습니까? 그래서 무엇을 어떻게 했는가, 이런 순리 안에서 이 말씀을 들으셔야 되겠지요."
+  },
+  {
+    source: "260412 주일예배(계17장) 음녀의 음행과 포도주",
+    date: "260412",
+    quote: "지금까지의 신앙은 교회에 가서 예수님 믿는다 하는 그 말로 신앙을 해왔지만 지금은 그 예수님이 약속하신 이 예언이 이루어지는 실상시대이기 때문에 이 말씀의 실상을 우리가 알아야 되겠다는 것이지요."
+  },
+  {
+    source: "260405 주일예배(계16장) 진노의 일곱 대접과 진노를 받는 자들",
+    date: "260405",
+    quote: "우리가 배웠다는 가치가 뭐가 있겠습니까? 말씀이 이루어졌을 때 이것보고 믿어 깨달아라는 뜻 아니겠습니까? 그래서 오늘은 어떠한 것이냐, 이제 둘째 장막 여기는 하나님 보좌 앞에 여기에서 나온 이긴 자들이 모여 있는 곳이지요."
+  },
+  {
+    source: "260405 주일예배(계16장) 진노의 일곱 대접과 진노를 받는 자들",
+    date: "260405",
+    quote: "그러면 우리에게는 이 말씀이 우리의 무기가 되는 것이지요. 또 힘이 되지요. 믿음의 힘이 되는 것입니다. 우리는 그냥 믿는다, 어쩐다, 끄떡대는 것이 아니라는 것입니다."
+  },
+  {
+    source: "260401 수요예배(계15장) 만민이 와서 경배할 곳 증거장막성전",
+    date: "260401",
+    quote: "그럼 우리는 이 성경을 보고도 이해를 못한다면 성경을 배웠다, 성경을 알았다 하는 가치가 없을 것입니다. 그래서 하늘이라고 하는 개념 땅이라고 하는 이 개념을 분명히 아시기 바랍니다."
+  },
+  {
+    source: "260401 수요예배(계15장) 만민이 와서 경배할 곳 증거장막성전",
+    date: "260401",
+    quote: "우리 신천지는 악인이나 선인이나 구별 없이 누구든지 와서 다시 나게 되면 하나님의 새로운 피조물로 하나님의 자녀가 될 것입니다. 그래서 깨닫게 하기 위해서 하는 말이었지, 이런 사람은 막아버리고 저런 사람만 오너라, 그것이 아니라 누구든지 이 말씀으로 거듭나게 되면 하나님의 자녀로 다시 나게 된다는 말이 되겠습니다."
+  },
+  {
+    source: "260322 주일예배(계13장) 짐승에게 표 받고 경배하는 선민",
+    date: "260322",
+    quote: "언제든지 듣는 사람이나 말하는 사람이 육하원칙에 입각해서 생각했으면 좋겠습니다. 언제냐, 어디냐, 누구냐, 무엇이냐, 왜 그렇게 했는가, 알아야하지 않겠습니까?"
+  },
+  {
+    source: "260322 주일예배(계13장) 짐승에게 표 받고 경배하는 선민",
+    date: "260322",
+    quote: "그러나 이 말씀의 실체는 이 말씀이 이루어지는 오늘날이 되겠지요. 그럼 이 말씀이 어디에서 이루어지는가를 본다면 하늘 장막에서 일어나는 사건입니다."
+  },
+  {
+    source: "260318 수요예배(계12장) 아들과 용과의 전쟁",
+    date: "260318",
+    quote: "신약성경에서 예수님이 피로 새 언약한 그 언약은 바로 어떠한 것이지요? 새 언약 말입니다. 아담 이후 많은 사람들하고 하나님께서는 언약을 했지만 이 사람들이 언약을 지키지 아니해서 소망에 이르지 못했다고 성경은 기록이 되어 있습니다."
+  },
+  {
+    source: "260318 수요예배(계12장) 아들과 용과의 전쟁",
+    date: "260318",
+    quote: "이기면 머리가 되고 지면 꼬리가 된다는 것입니다. 이래서 이기는 자가 필요하다는 것 아니겠습니까? 이기는 자가 하나님 보좌 앞에 유리바다에 가서 있게 되는 것이고 예수님의 보좌에 함께 앉게 되는 것이지요."
+  },
+  {
+    source: "260315 주일예배(계11장) 두 증인의 죽음과 일곱째 나팔",
+    date: "260315",
+    quote: "그러면 예수님을 통해서 계시 말씀을 받아야만이 소망인 영생에 들어갈 수가 있다는 말이 아니겠습니까? 그와 같이 오늘날 이 계시록 시대에도 예수 그리스도의 계시를, 예수가 열어주신 이 그리스도의 계시를 요한을 통해서 받아야만이 하나님도 예수님도 알게 되고 하나님과 예수님을 알므로 영생에 들어 갈 수가 있다, 그 말이거든요."
+  },
+  {
+    source: "260315 주일예배(계11장) 두 증인의 죽음과 일곱째 나팔",
+    date: "260315",
+    quote: "오늘날은 이 예언이 이루어진 실상을 보고 증거 하는 때라는 것을 아셔야 하겠습니다. 그렇다면 예수님이 예언을 이루고 그 실상을 증거 했듯이 오늘날도 이 계시록 예언의 실상을 증거 하는 때라는 것을 아셔야 하겠지요."
+  },
+  {
+    source: "260301 주일예배(계10장) 하늘에서 온 계시의 책",
+    date: "260301",
+    quote: "하나님의 역사, 정말 오랜 하나님의 역사였는데 언제 시작하고 언제 끝이 나는가가 우리가 궁금한 일이었는데 이제는 알만 하시지요? 하나님께서 천지를 창조하시고 아담을 창조해서 창조한 모든 것을 아담에게 유업으로 맡긴 것이었습니다."
+  },
+  {
+    source: "260301 주일예배(계10장) 하늘에서 온 계시의 책",
+    date: "260301",
+    quote: "우리에겐 직결되는 것은 신약이라는 이 약속, 이 말씀과 이 말씀대로 이루어진 실상이 우리에게 직결되는 내용이다, 그 말인 것입니다."
+  },
+  {
+    source: "260222 주일예배(계9장) 무저갱의 황충과 범죄한 천사",
+    date: "260222",
+    quote: "항시 생각해야 할 것은 예수님께서 무엇인가 하나 이루시는 것인데 그것을 이룰 때에는 천국비밀인지라 비유를 베풀어 말씀하셨다는 것을 잊어서는 아니 되겠습니다."
+  },
+  {
+    source: "260222 주일예배(계9장) 무저갱의 황충과 범죄한 천사",
+    date: "260222",
+    quote: "지금은 빙자한 비유의 때가 아니라 실상의 때를 말합니다. 실상이 이루어져야 하지 않겠습니까? 그러면 그 실상을 증거 하는 자가 있어야 되겠지요."
   }
 ];
 
@@ -76,6 +156,7 @@ const quoteGrid = document.querySelector("#quoteGrid");
 const template = document.querySelector("#quoteTemplate");
 const editionDate = document.querySelector("#editionDate");
 const sourceCount = document.querySelector("#sourceCount");
+const usedQuoteStorageKey = "ssn-rv-used-quotes-v1";
 
 const formatter = new Intl.DateTimeFormat("en", {
   weekday: "long",
@@ -85,7 +166,7 @@ const formatter = new Intl.DateTimeFormat("en", {
 });
 
 editionDate.textContent = formatter.format(new Date());
-sourceCount.textContent = `${new Set(quotePool.map((item) => item.source)).size} sources`;
+sourceCount.textContent = `${quotePool.length} excerpts · ${new Set(quotePool.map((item) => item.source)).size} sources`;
 
 function shuffle(items) {
   return [...items]
@@ -94,8 +175,24 @@ function shuffle(items) {
     .map(({ item }) => item);
 }
 
-function pickFiveDifferentSources() {
-  const grouped = quotePool.reduce((sources, quote) => {
+function quoteId(quote) {
+  return `${quote.source}::${quote.quote}`;
+}
+
+function getUsedQuoteIds() {
+  try {
+    return new Set(JSON.parse(localStorage.getItem(usedQuoteStorageKey)) || []);
+  } catch {
+    return new Set();
+  }
+}
+
+function saveUsedQuoteIds(usedQuoteIds) {
+  localStorage.setItem(usedQuoteStorageKey, JSON.stringify([...usedQuoteIds]));
+}
+
+function pickFiveDifferentSourcesFrom(pool) {
+  const grouped = pool.reduce((sources, quote) => {
     if (!sources.has(quote.source)) {
       sources.set(quote.source, []);
     }
@@ -103,9 +200,34 @@ function pickFiveDifferentSources() {
     return sources;
   }, new Map());
 
-  return shuffle([...grouped.values()])
+  const selectedQuotes = shuffle([...grouped.values()])
     .slice(0, 5)
     .map((quotes) => shuffle(quotes)[0]);
+
+  if (selectedQuotes.length === 5) {
+    return selectedQuotes;
+  }
+
+  const selectedQuoteIds = new Set(selectedQuotes.map(quoteId));
+  const remainingQuotes = shuffle(pool).filter((quote) => !selectedQuoteIds.has(quoteId(quote)));
+
+  return [...selectedQuotes, ...remainingQuotes].slice(0, 5);
+}
+
+function pickFiveDifferentSources() {
+  let usedQuoteIds = getUsedQuoteIds();
+  let availableQuotes = quotePool.filter((quote) => !usedQuoteIds.has(quoteId(quote)));
+
+  if (availableQuotes.length < 5) {
+    usedQuoteIds = new Set();
+    availableQuotes = quotePool;
+  }
+
+  const selectedQuotes = pickFiveDifferentSourcesFrom(availableQuotes);
+  selectedQuotes.forEach((quote) => usedQuoteIds.add(quoteId(quote)));
+  saveUsedQuoteIds(usedQuoteIds);
+
+  return selectedQuotes;
 }
 
 function renderQuotes(quotes) {
