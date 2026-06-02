@@ -156,7 +156,11 @@ const quoteGrid = document.querySelector("#quoteGrid");
 const template = document.querySelector("#quoteTemplate");
 const editionDate = document.querySelector("#editionDate");
 const sourceCount = document.querySelector("#sourceCount");
+const savedSection = document.querySelector("#savedSection");
+const savedList = document.querySelector("#savedList");
+const savedCount = document.querySelector("#savedCount");
 const usedQuoteStorageKey = "ssn-rv-used-quotes-v1";
+const savedQuoteStorageKey = "ssn-rv-saved-quotes-v1";
 
 const formatter = new Intl.DateTimeFormat("en", {
   weekday: "long",
@@ -189,6 +193,34 @@ function getUsedQuoteIds() {
 
 function saveUsedQuoteIds(usedQuoteIds) {
   localStorage.setItem(usedQuoteStorageKey, JSON.stringify([...usedQuoteIds]));
+}
+
+function getSavedQuotes() {
+  try {
+    return JSON.parse(localStorage.getItem(savedQuoteStorageKey)) || [];
+  } catch {
+    return [];
+  }
+}
+
+function saveSavedQuotes(savedQuotes) {
+  localStorage.setItem(savedQuoteStorageKey, JSON.stringify(savedQuotes));
+}
+
+function isQuoteSaved(quote) {
+  return getSavedQuotes().some((savedQuote) => quoteId(savedQuote) === quoteId(quote));
+}
+
+function toggleSavedQuote(quote) {
+  const savedQuotes = getSavedQuotes();
+  const id = quoteId(quote);
+  const nextSavedQuotes = savedQuotes.some((savedQuote) => quoteId(savedQuote) === id)
+    ? savedQuotes.filter((savedQuote) => quoteId(savedQuote) !== id)
+    : [quote, ...savedQuotes];
+
+  saveSavedQuotes(nextSavedQuotes);
+  renderSavedQuotes();
+  renderQuotes(currentQuotes);
 }
 
 function pickFiveDifferentSourcesFrom(pool) {
@@ -231,13 +263,59 @@ function pickFiveDifferentSources() {
 }
 
 function renderQuotes(quotes) {
+  currentQuotes = quotes;
   quoteGrid.replaceChildren();
 
   quotes.forEach((item) => {
     const node = template.content.cloneNode(true);
+    const saveButton = node.querySelector(".save-button");
+    const saved = isQuoteSaved(item);
+
     node.querySelector(".source-title").textContent = item.source;
     node.querySelector("blockquote").textContent = item.quote;
+    saveButton.textContent = saved ? "Saved" : "Save";
+    saveButton.classList.toggle("is-saved", saved);
+    saveButton.setAttribute("aria-pressed", String(saved));
+    saveButton.addEventListener("click", () => toggleSavedQuote(item));
     quoteGrid.append(node);
+  });
+}
+
+function renderSavedQuotes() {
+  const savedQuotes = getSavedQuotes();
+  savedList.replaceChildren();
+  savedCount.textContent = `${savedQuotes.length} saved`;
+  savedSection.hidden = false;
+
+  if (savedQuotes.length === 0) {
+    const empty = document.createElement("p");
+    empty.className = "saved-empty";
+    empty.textContent = "No saved quotes yet.";
+    savedList.append(empty);
+    return;
+  }
+
+  savedQuotes.forEach((item) => {
+    const article = document.createElement("article");
+    const actions = document.createElement("div");
+    const source = document.createElement("span");
+    const removeButton = document.createElement("button");
+    const quote = document.createElement("blockquote");
+
+    article.className = "saved-item";
+    actions.className = "saved-actions source-row";
+    source.className = "source-title";
+    removeButton.className = "remove-button";
+    removeButton.type = "button";
+
+    source.textContent = item.source;
+    removeButton.textContent = "Remove";
+    quote.textContent = item.quote;
+    removeButton.addEventListener("click", () => toggleSavedQuote(item));
+
+    actions.append(source, removeButton);
+    article.append(actions, quote);
+    savedList.append(article);
   });
 }
 
@@ -245,4 +323,6 @@ button.addEventListener("click", () => {
   renderQuotes(pickFiveDifferentSources());
 });
 
+let currentQuotes = [];
+renderSavedQuotes();
 renderQuotes(pickFiveDifferentSources());
