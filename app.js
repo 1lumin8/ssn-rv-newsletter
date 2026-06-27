@@ -247,11 +247,13 @@ function showCopiedState(buttonElement) {
 }
 
 async function copyQuoteText(quote, buttonElement) {
+  const copiedText = `${quote.quote}\n\n${quote.source}`;
+
   try {
-    await navigator.clipboard.writeText(quote.quote);
+    await navigator.clipboard.writeText(copiedText);
     showCopiedState(buttonElement);
   } catch {
-    if (fallbackCopyText(quote.quote)) {
+    if (fallbackCopyText(copiedText)) {
       showCopiedState(buttonElement);
     } else {
       buttonElement.textContent = "Copy failed";
