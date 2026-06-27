@@ -152,7 +152,14 @@ button:active {
   color: var(--ink);
 }
 
+.quote-actions {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 6px;
+}
+
 .save-button,
+.copy-button,
 .remove-button {
   flex: 0 0 auto;
   min-height: 24px;
@@ -166,7 +173,9 @@ button:active {
 }
 
 .save-button:hover,
+.copy-button:hover,
 .remove-button:hover,
+.copy-button.is-copied,
 .save-button.is-saved {
   background: var(--ink);
   color: var(--panel);
@@ -264,6 +273,7 @@ h2 {
   }
 
   .save-button,
+  .copy-button,
   .remove-button {
     width: auto;
   }

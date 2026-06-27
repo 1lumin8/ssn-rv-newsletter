@@ -223,6 +223,42 @@ function toggleSavedQuote(quote) {
   renderQuotes(currentQuotes);
 }
 
+function fallbackCopyText(text) {
+  const textArea = document.createElement("textarea");
+  textArea.value = text;
+  textArea.setAttribute("readonly", "");
+  textArea.style.position = "fixed";
+  textArea.style.top = "-999px";
+  document.body.append(textArea);
+  textArea.select();
+  const copied = document.execCommand("copy");
+  textArea.remove();
+  return copied;
+}
+
+function showCopiedState(buttonElement) {
+  buttonElement.textContent = "Copied";
+  buttonElement.classList.add("is-copied");
+
+  window.setTimeout(() => {
+    buttonElement.textContent = "Copy";
+    buttonElement.classList.remove("is-copied");
+  }, 1400);
+}
+
+async function copyQuoteText(quote, buttonElement) {
+  try {
+    await navigator.clipboard.writeText(quote.quote);
+    showCopiedState(buttonElement);
+  } catch {
+    if (fallbackCopyText(quote.quote)) {
+      showCopiedState(buttonElement);
+    } else {
+      buttonElement.textContent = "Copy failed";
+    }
+  }
+}
+
 function pickFiveDifferentSourcesFrom(pool) {
   const grouped = pool.reduce((sources, quote) => {
     if (!sources.has(quote.source)) {
@@ -268,11 +304,13 @@ function renderQuotes(quotes) {
 
   quotes.forEach((item) => {
     const node = template.content.cloneNode(true);
+    const copyButton = node.querySelector(".copy-button");
     const saveButton = node.querySelector(".save-button");
     const saved = isQuoteSaved(item);
 
     node.querySelector(".source-title").textContent = item.source;
     node.querySelector("blockquote").textContent = item.quote;
+    copyButton.addEventListener("click", () => copyQuoteText(item, copyButton));
     saveButton.textContent = saved ? "Saved" : "Save";
     saveButton.classList.toggle("is-saved", saved);
     saveButton.setAttribute("aria-pressed", String(saved));
@@ -298,22 +336,30 @@ function renderSavedQuotes() {
   savedQuotes.forEach((item) => {
     const article = document.createElement("article");
     const actions = document.createElement("div");
+    const buttonGroup = document.createElement("div");
     const source = document.createElement("span");
+    const copyButton = document.createElement("button");
     const removeButton = document.createElement("button");
     const quote = document.createElement("blockquote");
 
     article.className = "saved-item";
     actions.className = "saved-actions source-row";
+    buttonGroup.className = "quote-actions";
     source.className = "source-title";
+    copyButton.className = "copy-button";
     removeButton.className = "remove-button";
+    copyButton.type = "button";
     removeButton.type = "button";
 
     source.textContent = item.source;
+    copyButton.textContent = "Copy";
     removeButton.textContent = "Remove";
     quote.textContent = item.quote;
+    copyButton.addEventListener("click", () => copyQuoteText(item, copyButton));
     removeButton.addEventListener("click", () => toggleSavedQuote(item));
 
-    actions.append(source, removeButton);
+    buttonGroup.append(copyButton, removeButton);
+    actions.append(source, buttonGroup);
     article.append(actions, quote);
     savedList.append(article);
   });

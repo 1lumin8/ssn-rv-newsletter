@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,600;6..72,700&family=Noto+Sans+KR:wght@500;700;800&family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css?v=20260602-4">
+    <link rel="stylesheet" href="styles.css?v=20260627">
   </head>
   <body>
     <main class="edition-shell">
@@ -41,12 +41,15 @@
       <article class="quote-card">
         <div class="source-row">
           <span class="source-title"></span>
-          <button class="save-button" type="button" aria-label="Save quote">Save</button>
+          <div class="quote-actions">
+            <button class="copy-button" type="button" aria-label="Copy quote">Copy</button>
+            <button class="save-button" type="button" aria-label="Save quote">Save</button>
+          </div>
         </div>
         <blockquote></blockquote>
       </article>
     </template>
 
-    <script src="app.js?v=20260602-3"></script>
+    <script src="app.js?v=20260627"></script>
   </body>
 </html>
